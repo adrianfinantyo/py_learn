@@ -1,13 +1,16 @@
 import random
 import os
+import time
 
-chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+chars = "abcdefghijklmnopqrstuvwxyz1234567890"
 
 pass_ori = str(input("Masukkan kata sandi yang hendak di pecahkan : "))
 pass_length = int(len(pass_ori))
 print ("panjang : ", pass_length)
 print ("\nTunggu sebentar, kata sandi sedang dipecahkan...\n")
 pass_crack = ""
+
+begin = time.time()
 while pass_crack != pass_ori :
     for i in range (0,pass_length) :
             pass_char = random.choice(chars)
@@ -15,7 +18,11 @@ while pass_crack != pass_ori :
     print (list(pass_crack))
     if pass_crack != pass_ori :
         pass_crack = ""
-print ("Kata sandi terpecahkan : " + pass_crack + "\n\n")
+end = time.time()
+execution_time = end-begin
+
+print ("\n\nKata sandi terpecahkan : " + pass_crack)
+print ("Dipecahkan dalam waktu : ", execution_time + "\n")
 
 
 os.system ("pause")
