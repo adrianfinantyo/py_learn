@@ -20,10 +20,8 @@ while pass_crack != pass_ori :
         pass_crack = ""
 end = time.time()
 execution_time = end-begin
-
-print ("\n\nKata sandi terpecahkan : " + pass_crack)
-print ("Dipecahkan dalam waktu : ", execution_time + "\n")
-
+print ("\n\nKata sandi terpecahkan : ", pass_crack)
+print ("Dipecahkan dalam waktu : ", execution_time, "\n")
 
 os.system ("pause")
 

@@ -3,7 +3,7 @@ import time
 import os
 
 time.sleep (5)
-fn = r"C:\Dev\py_learn\spam_index"
+fn = "C:\\Dev\\py_learn\\spam_index.txt"
 os.path.exists(fn)
 f = open (fn, 'r')
 for word in f :
